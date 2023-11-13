@@ -1,0 +1,17 @@
+<main class="container">
+    <article class="row justify-content-center align-items-center flex-center" style="height: 80vh;">
+        <section class="col-md-6 mb-3">
+            <h1 class="display-4"><%= user.fName %> <%= user.lName %></h1>
+            <h2><%= user.username %></h2>
+            <p>
+                Member Since: <%= user.joinedDate.toLocaleString() %>
+            </p>
+            <a href="mailto:<%= user.email %>" class="btn btn-primary mt-2">Email Me</a>
+        </section>
+        <section class="col-md-6 mb-3">
+            <p class="lead">
+                <%= user.bio %>
+            </p>
+        </section>
+    </article>
+</main>

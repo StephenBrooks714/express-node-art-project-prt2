@@ -1,0 +1,47 @@
+<!doctype HTML>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<%- include('layouts/navBar') -%>
+<!--main body-->
+<main class="container">
+    <div class="row justify-content-center align-items-center text-center d-flex mx-auto flex-center"
+         style="margin-top: 130px; margin-bottom: 80px;">
+        <div class="col-lg-8">
+            <h1 class="font-weight-bold mb-4">Login to Your Account</h1>
+            <form action="/login/user" method="post" enctype="multipart/form-data">
+                <div class="row mb-4">
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <!-- Material outline input -->
+                        <div class="md-form md-outline mb-0">
+                            <input type="text" name="username" id="form-username" class="form-control">
+                            <label for="form-username">Username</label>
+                        </div>
+
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <!-- Material outline input -->
+                        <div class="md-form md-outline mb-0">
+                            <input type="password" name="password" id="form-password" class="form-control">
+                            <label for="form-password">Password</label>
+                        </div>
+
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <button class="btn btn-primary" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</main>
+<!--main body-->
+<%- include('layouts/footer') -%>
+</body>
+<!--scripts-->
+<%- include('layouts/scripts') -%>
+</html>
