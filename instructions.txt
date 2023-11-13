@@ -1,5 +1,5 @@
 Github Repository for Starter Project
-run this command: git clone https://github.com/StephenBrooks714/express-node-art-project.git 
+run this command: git clone https://github.com/StephenBrooks714/express-node-art-project-prt2.git
 
 mdb4 installation link for jquery
 npm i mdbootstrap
