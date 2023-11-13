@@ -3,32 +3,55 @@
         <div class="col-md-12">
             <h3 class="h1 mb-3">Some of my previous work</h3>
         </div>
-        <div class="col-md-4 zoom">
-            <a href="/">
-                <h4>Summary Title</h4>
-                <img src="https://placehold.co/300x200" 
-                    class="img-fluid"
-                    alt="Summary Title" 
-                />
-            </a>
-        </div>
-        <div class="col-md-4 zoom">
-            <a href="/">
-                <h4>Summary Title</h4>
-                <img src="https://placehold.co/300x200" 
-                    class="img-fluid"
-                    alt="Summary Title" 
-                />
-            </a>
-        </div>
-        <div class="col-md-4 zoom">
-            <a href="/">
-                <h4>Summary Title</h4>
-                <img src="https://placehold.co/300x200" 
-                    class="img-fluid"
-                    alt="Summary Title" 
-                />
-            </a>
-        </div>
+        <% if(projects <= 4) { %>
+            <% for(i=0; i < projects.length; i++) { %>
+                <div class="col-lg-3 zoom wow fadeIn col-md-6 mb-4">
+                    <a href="/project/<%= projects[i]._id %>">
+                        <p class="lead font-weight-bold"><%= projects[i].title %></p>
+                        <img src="<%= projects[i].image %>"
+                             class="img-fluid"
+                             alt="<%= projects[i].title %>"
+                        />
+                    </a>
+                </div>
+            <% } %>
+        <% } else { %>
+            <div class="col-lg-3 zoom wow fadeIn col-md-6 mb-4">
+                <a href="/projects">
+                    <h4>Project Title</h4>
+                    <img src="https://placehold.co/300x200"
+                         class="img-fluid"
+                         alt="project1"
+                    />
+                </a>
+            </div>
+            <div class="col-lg-3 zoom wow fadeIn col-md-6 mb-4">
+                <a href="/projects">
+                    <h4>Project Title</h4>
+                    <img src="https://placehold.co/300x200"
+                         class="img-fluid"
+                         alt="project1"
+                    />
+                </a>
+            </div>
+            <div class="col-lg-3 zoom wow fadeIn col-md-6 mb-4">
+                <a href="/projects">
+                    <h4>Project Title</h4>
+                    <img src="https://placehold.co/300x200"
+                         class="img-fluid"
+                         alt="project1"
+                    />
+                </a>
+            </div>
+            <div class="col-lg-3 zoom wow fadeIn col-md-6 mb-4">
+                <a href="/projects">
+                    <h4>Project Title</h4>
+                    <img src="https://placehold.co/300x200"
+                         class="img-fluid"
+                         alt="project1"
+                    />
+                </a>
+            </div>
+        <% } %>
     </div>
 </div>

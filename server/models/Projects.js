@@ -8,9 +8,10 @@ const FeaturePostSchema = new Schema ({
         ref: 'User',
         required: true
     },
-    priceUrl: String,
-    price: String,
+    image: String,
+    summary: String,
     feature: Array,
+    detail: String,
     datePosted:{
         type: Date,
         default: new Date()

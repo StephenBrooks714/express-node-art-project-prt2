@@ -11,7 +11,7 @@ const session = require('express-session');
 const router = require('./server/routes/router')
 
 require('dotenv').config();
-const generator = SitemapGenerator('https://expressdeveloper-723c728f1447.herokuapp.com/', {
+const generator = SitemapGenerator('http://localhost:8080/', {
     stripQuerystring: false
 });
 // register event listeners

@@ -33,7 +33,7 @@ router.post("/store/user", storeUserController);
 router.get("/login", cache(2), loginController);
 router.post("/login/user", loginUserController);
 router.get("/logout", logoutUserController);
-router.get("/profile/:id", profileController);
+router.get("/about", profileController);
 // projects
 router.get("/newProject", auth, cache(2), newProjectController);
 router.post("/store/project", projectVal, storeProjectController);

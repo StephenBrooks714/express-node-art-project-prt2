@@ -1,115 +1,36 @@
 <div class="row justify-content-center align-items-center text-center my-5 py-3">
-    <% if(pricing == "") { %>
-    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
-        <div class="card">
-            <div class="card-header blue-gradient-rgba text-white">
-                <h4>Custom Website</h4>
-                <p class="lead font-weight-bold">$129</p>
-            </div>
-            <div class="card-body text-left">
-                <ul>
-                    <li>
-                        Pages built with HTML5 & CSS
-                    </li>
-                    <li>
-                        Pages function with JavaScript
-                    </li>
-                    <li>
-                        Backend built with Express & Node
-                    </li>
-                </ul>
-            </div>
-            <div class="card-footer">
-                <a href="/" class="btn btn-primary">get started</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
-        <div class="card">
-            <div class="card-header blue-gradient-rgba text-white">
-                <h4>Shopify Website</h4>
-                <p class="lead font-weight-bold">$249</p>
-            </div>
-            <div class="card-body text-left">
-                <ul>
-                    <li>
-                        Template made from SEO Design
-                    </li>
-                    <li>
-                        Plugins for integrations & CMS
-                    </li>
-                    <li>
-                        Most used ecommerce platform online
-                    </li>
-                </ul>
-            </div>
-            <div class="card-footer">
-                <a href="/" class="btn btn-primary">get started</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
-        <div class="card">
-            <div class="card-header blue-gradient-rgba text-white">
-                <h4>WordPress Website</h4>
-                <p class="lead font-weight-bold">$310</p>
-            </div>
-            <div class="card-body text-left">
-                <ul>
-                    <li>
-                        SEO enriched content for pages
-                    </li>
-                    <li>
-                        Easy to use CMS for all your content
-                    </li>
-                    <li>
-                        Easy to change content with user access
-                    </li>
-                </ul>
-            </div>
-            <div class="card-footer">
-                <a href="/" class="btn btn-primary">get started</a>
-            </div>
-        </div>
+    <% if(project == "") { %>
+    <div class="col-lg-10 col-md-12 col-sm-12 mb-3">
+        <h1>There Are No Projects Posted Yet.</h1>
     </div>
     <% } else { %>
-        <% for(i=0; i < pricing.length; i++) { %>
-            <div class="row mb-3 text-center">
-                <div class="col-md-6">
-                    <h1 class="font-weight-bold mb-3"><%= project.title %></h1>
-                </div>
-                <div class="col-md-6">
-                    <a href="<%= project.url %>" target="_blank" class="btn mb-2 text-white btn-black rounded-pill">Live App Url</a>
-                </div>
-            </div>
+        <div class="col-md-6">
+            <h1 class="font-weight-bold mb-3"><%= project.title %></h1>
+        </div>
+        <div class="col-md-6">
+            <p>
+                <%= project.summary %>
+            </p>
             <p>
                 <strong>Posted By:</strong> <a href="/profile/<%= project.userid._id %>"><%= project.userid.username %></a> on <%= project.datePosted.toLocaleString() %>
             </p>
-           <div class="col-md-6 mb-3">
-                <div class="card">
-                    <div class="card-header blue-gradient-rgba text-white">
-                        <h4><%= pricing[i].title %></h4>
-                        <p class="lead font-weight-bold"><%= pricing[i].price %></p>
-                    </div>
-                    <div class="card-body text-left">
-                        <ul>
-                            <% pricing[i].feature.forEach(function(feature){ %>
-                                <li><%= feature %></li>
-                            <% }) %>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <a href="<%= pricing[i].priceUrl %>" target="_blank" class="btn btn-primary">get started</a>
-                    </div>
-                </div>
-           </div>
-           <div class="col-md-6 mb-3">
-                <figure class="figure">
-                    <img src="<%= project.image %>" class="figure-img img-fluid z-depth-1"
-                        alt="<%= project.title %>">
-                    <figcaption class="figure-caption"><%= project.title %></figcaption>
-                </figure>
-           </div>
-        <% } %>
+        </div>
+       <div class="col-md-6 col-sm-12 mb-3">
+        <p class="lead font-weight-bold">
+            This Project Insludes:
+        </p>
+        <ul class="list-group list-group-flush">
+            <% project.feature.forEach(function(feature){ %>
+                <li class="list-group-item"><%= feature %></li>
+            <% }) %>
+        </ul>
+       </div>
+       <div class="col-md-6 col-sm-12 mb-3">
+            <figure class="figure">
+                <img src="<%= project.image %>" class="figure-img img-fluid z-depth-1"
+                    alt="<%= project.title %>">
+                <figcaption class="figure-caption"><%= project.title %></figcaption>
+            </figure>
+       </div>
     <% } %>
 </div>

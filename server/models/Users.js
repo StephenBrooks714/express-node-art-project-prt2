@@ -17,10 +17,6 @@ const mongoose = require('mongoose');
             type: String,
             required: true
         },
-        image: {
-            type: String,
-            required: true
-        },
         email: {
             type: String,
             unique: [true,'Please choose a different email'],

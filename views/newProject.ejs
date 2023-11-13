@@ -21,14 +21,18 @@
                             <input type="text" name="title" id="title" class="form-control" />
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="url" class="form-label">Project Url</label>
-                            <input type="url" name="url" id="url" class="form-control" />
+                            <label for="summary" class="form-label">Project Summary</label>
+                            <input type="text" name="summary" id="summary" class="form-control" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="codeUsed" class="form-label">Project Code</label>
-                            <input type="text" name="codeUsed" id="codeUsed" class="form-control" />
+                            <div class="featureList">
+                                <div class="featureDiv">
+                                    <input type="text" placeholder="Talk about the features" name="feature" id="feature" class="mb-2 form-control" />
+                                </div>
+                            </div>
+                            <span>Add New Feature</span> <button type="button" class="btn btn-primary" id="addFeature">Add</button>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="image" class="form-label">Project Image</label>
