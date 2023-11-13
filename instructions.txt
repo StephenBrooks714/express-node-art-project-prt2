@@ -1,0 +1,78 @@
+Github Repository for Starter Project
+run this command: git clone https://github.com/StephenBrooks714/express-node-art-project.git 
+
+mdb4 installation link for jquery
+npm i mdbootstrap
+Copy and paste this link in the browser: https://mdbootstrap.com/docs/b4/jquery/getting-started/installation/
+
+Setting up Gihtub account
+https://github.com/ 
+
+Setting up heroku account
+https://heroku.com/
+
+Downloading visual studio code editor
+https://code.visualstudio.com/
+
+///////////////////////////////////////////////////////////////
+
+CREATING SCHEMAS
+
+1) Inside the "SERVER" folder, go to the "Models" folder. Right click on it,
+    select {new file}, name it Users.js.
+2) Paste the following code inside it:
+
+    const mongoose = require('mongoose');
+    const bcrypt = require("bcrypt");
+    const Schema = mongoose.Schema;
+    const uniqueValidator = require('mongoose-unique-validator')
+
+    const UserSchema = new Schema ({
+        username: {
+            type: String,
+            unique: [true,'Please provide username'],
+            required: true
+        },
+        fName: {
+            type: String,
+            required: true
+        },
+        lName: {
+            type: String,
+            required: true
+        },
+        image: {
+            type: String,
+            required: true
+        },
+        email: {
+            type: String,
+            unique: [true,'Please choose a different email'],
+            required: true
+        },
+        password: {
+            type: String,
+            required: [true,'Please provide password']
+        },
+        bio: {
+            type: String,
+            required: [true,'Please describe yourself']
+        },
+        joinedDate: {
+            type: Date,
+            default: new Date
+        }
+    })
+
+    UserSchema.plugin(uniqueValidator)
+
+    UserSchema.pre('save',function(next){
+        const user = this
+        bcrypt.hash(user.password, 10,(error, hash)=>{
+            user.password = hash
+            next()
+        })
+    })
+
+    const User = mongoose.model('User',UserSchema);
+    module.exports = User;
