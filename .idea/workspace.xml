@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c37268a-12af-4153-ad02-3d6f2dd08ec4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/home-image.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/data/blogs-data.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/data/blogs-data.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/data/home-features.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/data/home-features.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/data/projects-data.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/data/projects-data.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/home-articles.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/home-articles.ejs" afterDir="false" />
-    </list>
+    <list default="true" id="5c37268a-12af-4153-ad02-3d6f2dd08ec4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1699920352375</updated>
       <workItem from="1699920356035" duration="284000" />
-      <workItem from="1699977245425" duration="618000" />
+      <workItem from="1699977245425" duration="736000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,9 @@ const router = express.Router();
 const cache = require("../cache/mcache");
 
 const homeController = require("../controllers/homePage");
+const contactController = require("../controllers/contactPage");
+const sendFormController = require("../controllers/sendForm");
+const sendBannerController = require("../controllers/snedBannerForm");
 const registerController = require("../controllers/registerPage");
 const storeUserController = require("../controllers/storeUser");
 const loginController = require("../controllers/loginPage");
@@ -27,6 +30,9 @@ const blog = require("../middleware/validateBlogForm");
 const projectVal = require("../middleware/validateProjectForm");
 
 router.get("/", cache(2), homeController);
+router.get("/contact", contactController);
+router.post("/send/form", sendFormController);
+router.post("/send/banner", sendBannerController);
 // users
 router.get("/register", cache(2), registerController);
 router.post("/store/user", storeUserController);

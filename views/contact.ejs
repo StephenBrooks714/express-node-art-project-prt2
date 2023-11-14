@@ -1,0 +1,41 @@
+<!doctype HTML>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<!--navbar-->
+<%- include('layouts/navBar') -%>
+<!--home intro-->
+
+<!--main body-->
+<main>
+    <div class="container my-5 py-5">
+        <div class="row justify-content-center align-items-center flex-center d-flex mx-auto">
+            <div class="col-md-10">
+                <h1 class="display-4">Contact Us</h1>
+                <form action="/send/form" method="post" enctype="multipart/form-data">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" name="subject" required id="subject" class="form-control mb-3" />
+                    <label for="from" class="form-label">Your Email</label>
+                    <input type="email" name="from" required id="from" class="form-control mb-3" />
+                    <label for="text" class="form-label">Your Message</label>
+                    <textarea name="text" id="text" required class="form-control mb-3" rows="7"></textarea>
+                    <button class="btn btn-dark blue-gradient"
+                            type="submit">send form
+                    </button>
+                </form>
+                <script>
+                    let form = document.getElementsByTagName("form")[0];
+                    form.addEventListener("submit", () => {
+                        alert("Message Sent!!!");
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</main>
+<!--main body-->
+<%- include('layouts/footer') -%>
+</body>
+<!--scripts-->
+<%- include('layouts/scripts') -%>
+</html>

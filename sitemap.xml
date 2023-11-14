@@ -13,6 +13,9 @@
     <loc>http://localhost:8080/projects</loc>
   </url>
   <url>
+    <loc>http://localhost:8080/contact</loc>
+  </url>
+  <url>
     <loc>http://localhost:8080/register</loc>
   </url>
   <url>

@@ -42,14 +42,14 @@
           <p class="lead text-center white-text pt-2 mb-5">Subscribe to our newsletter and receive the latest news
             from MDB.</p>
   
-          <form class="input-grey mb-5" action="" method="post" target="_blank">
+          <form class="input-grey mb-5" action="/send/banner" method="post">
             <div class="form-row">
               <div class="col-md-4 ml-auto">
                 <div class="input-group input-group-lg z-depth-1">
                   <div class="input-group-prepend">
                     <span class="input-group-text rgba-white-light border-0"><i class="fa fa-envelope white-text"></i></span>
                   </div>
-                  <input type="email" name="EMAIL" class="form-control form-control-lg rgba-white-light white-text border-0 z-depth-0" placeholder="Email Address">
+                  <input type="email" name="from" class="form-control form-control-lg rgba-white-light white-text border-0 z-depth-0" placeholder="Email Address">
                 </div>
               </div>
   
@@ -58,7 +58,12 @@
               </div>
             </div>
           </form>
-  
+          <script>
+            let form = document.getElementsByTagName("form")[0];
+            form.addEventListener("submit", () => {
+                alert("You have been subscribed!!!!!");
+            });
+        </script>
           <div class="social text-center">
             <a class="mx-1" href="#"><i class="fab fa-facebook-f p-2 rounded rgba-white-light white-text"></i></a>
             <a class="mx-1" href="#"><i class="fab fa-twitter p-2 rounded rgba-white-light white-text"></i></a>
