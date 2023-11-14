@@ -19,9 +19,6 @@
     <loc>http://localhost:8080/login</loc>
   </url>
   <url>
-    <loc>http://localhost:8080/post/655298f2ce302e7391c53b3f</loc>
-  </url>
-  <url>
     <loc>http://localhost:8080/project/6552c4073a3ee9bb287953da</loc>
   </url>
   <url>
@@ -32,5 +29,8 @@
   </url>
   <url>
     <loc>http://localhost:8080/project/655295b9d8533eb7c56b8a41</loc>
+  </url>
+  <url>
+    <loc>http://localhost:8080/post/655298f2ce302e7391c53b3f</loc>
   </url>
 </urlset>

@@ -9,6 +9,12 @@
     </div>
 <% } else { %>
         <div class="row justify-content-center align-items-center text-center" style="margin-top: 130px; margin-bottom: 70px;">
+            <div class="col-md-12">
+                <h1>Read My Posted Articles About Art</h1>
+                <p class="mb-4">
+                    A gallery of work and Designs for Everyone To Share.
+                </p>
+            </div>
             <% for(i=0; i < blogs.length; i++) { %>
                 <div class="col-lg-3 col-md-6 col-sm-12 zoom mb-3">
                     <a href="/post/<%= blogs[i]._id %>">
